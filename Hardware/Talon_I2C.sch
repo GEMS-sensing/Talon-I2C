@@ -922,6 +922,23 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 <circle x="-1.27" y="-1.397" radius="0.127" width="0.127" layer="21"/>
 <text x="1.524" y="0" size="0.6096" layer="25" font="vector" ratio="15" rot="R90" align="center">&gt;NAME</text>
 </package>
+<package name="TESTPOINT_0603">
+<description>&lt;b&gt;Test Point&lt;/b&gt;
+0603 size, RCU model</description>
+<wire x1="-1.002" y1="0.76" x2="1.002" y2="0.76" width="0.05" layer="39"/>
+<wire x1="1.002" y1="0.76" x2="1.002" y2="-0.76" width="0.05" layer="39"/>
+<wire x1="1.002" y1="-0.76" x2="-1.002" y2="-0.76" width="0.05" layer="39"/>
+<wire x1="-1.002" y1="-0.76" x2="-1.002" y2="0.76" width="0.05" layer="39"/>
+<wire x1="-0.9" y1="0.5" x2="0.9" y2="0.5" width="0.127" layer="51"/>
+<wire x1="-0.9" y1="-0.5" x2="0.9" y2="-0.5" width="0.127" layer="51"/>
+<text x="0" y="1.241615625" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<text x="-0.0713" y="-1.27828125" size="0.6096" layer="27" font="vector" ratio="15" align="center">&gt;VALUE</text>
+<wire x1="0.9" y1="0.5" x2="0.9" y2="-0.5" width="0.127" layer="51"/>
+<wire x1="-0.9" y1="0.5" x2="-0.9" y2="-0.5" width="0.127" layer="51"/>
+<wire x1="-0.8" y1="0.69" x2="0.8" y2="0.69" width="0.127" layer="21"/>
+<wire x1="-0.8" y1="-0.69" x2="0.8" y2="-0.69" width="0.127" layer="21"/>
+<smd name="1" x="0" y="0" dx="1.6" dy="0.8" layer="1" roundness="20"/>
+</package>
 </packages>
 <symbols>
 <symbol name="LABELED-PMOS-1">
@@ -1600,6 +1617,14 @@ http://creativecommons.org/licenses/by-sa/4.0/</text>
 <text x="0" y="9.144" size="1.778" layer="95" align="center">PCA9617</text>
 <text x="0" y="-6.604" size="1.778" layer="95" align="center">&gt;NAME</text>
 </symbol>
+<symbol name="TESTPOINT">
+<pin name="P$1" x="0" y="0" visible="off" length="middle" rot="R90"/>
+<wire x1="0" y1="5.08" x2="-1.27" y2="6.35" width="0.15" layer="94"/>
+<wire x1="-1.27" y1="6.35" x2="0" y2="7.62" width="0.15" layer="94"/>
+<wire x1="0" y1="7.62" x2="1.27" y2="6.35" width="0.15" layer="94"/>
+<wire x1="1.27" y1="6.35" x2="0" y2="5.08" width="0.15" layer="94"/>
+<text x="-2.54" y="3.81" size="1.27" layer="95" rot="R90" align="center">&gt;NAME</text>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="MOSFET-PCH" prefix="Q">
@@ -1715,7 +1740,12 @@ http://creativecommons.org/licenses/by-sa/4.0/</text>
 <connect gate="G$1" pin="S" pad="1 2 3"/>
 </connects>
 <technologies>
-<technology name=""/>
+<technology name="">
+<attribute name="DIGIKEY" value="DMP2008UFG-7DICT-ND" constant="no"/>
+<attribute name="MF" value="Diodes Inc" constant="no"/>
+<attribute name="MPN" value="DMP2008UFG-7" constant="no"/>
+<attribute name="VALUE" value="DMP2008" constant="no"/>
+</technology>
 </technologies>
 </device>
 <device name="-DMP3036SFG" package="POWERDI3333-8">
@@ -2912,6 +2942,26 @@ Digikey:
 <attribute name="DIGIKEY" value="568-10953-1-ND" constant="no"/>
 <attribute name="MF" value="NXP" constant="no"/>
 <attribute name="MPN" value="PCA9617ATPZ" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TESTPOINT" prefix="TP">
+<description>&lt;b&gt;Test Point&lt;/b&gt;</description>
+<gates>
+<gate name="G$1" symbol="TESTPOINT" x="0" y="0"/>
+</gates>
+<devices>
+<device name="RCU" package="TESTPOINT_0603">
+<connects>
+<connect gate="G$1" pin="P$1" pad="1"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="DIGIKEY" value="A106145CT-ND" constant="no"/>
+<attribute name="MF" value="TE Connectivity" constant="no"/>
+<attribute name="MPN" value="RCU-0C" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -6137,6 +6187,12 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MPN" value="RC0402JR-070RL" constant="no"/>
 <attribute name="VALUE_PART" value="0" constant="no"/>
 </technology>
+<technology name="10">
+<attribute name="DIGIKEY" value="A129603CT-ND" constant="no"/>
+<attribute name="MF" value="TE" constant="no"/>
+<attribute name="MPN" value="CRGCQ0402F10R" constant="no"/>
+<attribute name="VALUE_PART" value="10" constant="no"/>
+</technology>
 <technology name="100">
 <attribute name="DIGIKEY" value="311-100LRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
@@ -6160,6 +6216,18 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0402FR-07120KL" constant="no"/>
 <attribute name="VALUE_PART" value="120k" constant="no"/>
+</technology>
+<technology name="130K">
+<attribute name="DIGIKEY" value="YAG2969CT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0402FR-07130KL" constant="no"/>
+<attribute name="VALUE_PART" value="130k" constant="no"/>
+</technology>
+<technology name="150K">
+<attribute name="DIGIKEY" value="311-150KLRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0402FR-07150KL" constant="no"/>
+<attribute name="VALUE_PART" value="150k" constant="no"/>
 </technology>
 <technology name="180K">
 <attribute name="DIGIKEY" value="311-180KLRCT-ND" constant="no"/>
@@ -6185,6 +6253,12 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MPN" value="RC0402FR-072K2L" constant="no"/>
 <attribute name="VALUE_PART" value="2.2k" constant="no"/>
 </technology>
+<technology name="2.7K">
+<attribute name="DIGIKEY" value="CR0402-FX-2701GLFCT-ND" constant="no"/>
+<attribute name="MF" value="Bourns" constant="no"/>
+<attribute name="MPN" value="CR0402-FX-2701GLF" constant="no"/>
+<attribute name="VALUE_PART" value="2.7k" constant="no"/>
+</technology>
 <technology name="20">
 <attribute name="DIGIKEY" value="311-20LRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
@@ -6196,6 +6270,18 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0402FR-07200KL" constant="no"/>
 <attribute name="VALUE_PART" value="200k" constant="no"/>
+</technology>
+<technology name="20K">
+<attribute name="DIGIKEY" value="CR0402-FX-2002GLFCT-ND" constant="no"/>
+<attribute name="MF" value="Bourns" constant="no"/>
+<attribute name="MPN" value="CR0402-FX-2002GLF" constant="no"/>
+<attribute name="VALUE_PART" value="20k" constant="no"/>
+</technology>
+<technology name="220">
+<attribute name="DIGIKEY" value="A129619CT-ND" constant="no"/>
+<attribute name="MF" value="TE" constant="no"/>
+<attribute name="MPN" value="CRGCQ0402F220R" constant="no"/>
+<attribute name="VALUE_PART" value="220" constant="no"/>
 </technology>
 <technology name="232">
 <attribute name="DIGIKEY" value="YAG3063CT-ND" constant="no"/>
@@ -6221,6 +6307,12 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MPN" value="RC0402FR-072KL" constant="no"/>
 <attribute name="VALUE_PART" value="2k" constant="no"/>
 </technology>
+<technology name="30K">
+<attribute name="DIGIKEY" value="YAG3474CT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="AC0402FR-0730KL" constant="no"/>
+<attribute name="VALUE_PART" value="30k" constant="no"/>
+</technology>
 <technology name="330">
 <attribute name="DIGIKEY" value="311-330LRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
@@ -6244,6 +6336,12 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0402FR-07453RL" constant="no"/>
 <attribute name="VALUE_PART" value="453" constant="no"/>
+</technology>
+<technology name="470">
+<attribute name="DIGIKEY" value="311-470LRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0402FR-07470RL" constant="no"/>
+<attribute name="VALUE_PART" value="470" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -6319,6 +6417,12 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MPN" value="RMCF0603FT10M0" constant="no"/>
 <attribute name="VALUE_PART" value="10M" constant="no"/>
 </technology>
+<technology name="110K">
+<attribute name="DIGIKEY" value="CR0603-FX-1103ELFCT-ND" constant="no"/>
+<attribute name="MF" value="Bourns" constant="no"/>
+<attribute name="MPN" value="CR0603-FX-1103ELF" constant="no"/>
+<attribute name="VALUE_PART" value="110k" constant="no"/>
+</technology>
 <technology name="115K">
 <attribute name="DIGIKEY" value="311-115KHRCT-ND" constant="no"/>
 <attribute name="MF" value="Yageo" constant="no"/>
@@ -6354,6 +6458,12 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MF" value="Yageo" constant="no"/>
 <attribute name="MPN" value="RC0603FR-07150RL" constant="no"/>
 <attribute name="VALUE_PART" value="150" constant="no"/>
+</technology>
+<technology name="150K">
+<attribute name="DIGIKEY" value="311-150KHRCT-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="RC0603FR-07150KL" constant="no"/>
+<attribute name="VALUE_PART" value="150k" constant="no"/>
 </technology>
 <technology name="180K">
 <attribute name="DIGIKEY" value="P180KHCT-ND" constant="no"/>
@@ -6523,6 +6633,12 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MPN" value="RC0603JR-07470KL" constant="no"/>
 <attribute name="VALUE_PART" value="470k" constant="no"/>
 </technology>
+<technology name="49.9K">
+<attribute name="DIGIKEY" value="RMCF0603FG49K9CT-ND" constant="no"/>
+<attribute name="MF" value="Stackpole" constant="no"/>
+<attribute name="MPN" value="RMCF0603FG49K9" constant="no"/>
+<attribute name="VALUE_PART" value="49.9k" constant="no"/>
+</technology>
 <technology name="51.1K">
 <attribute name="DIGIKEY" value="118-CR0603-FX-5112ELFCT-ND" constant="no"/>
 <attribute name="MF" value="Bourns" constant="no"/>
@@ -6649,6 +6765,11 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="DIGIKEY" value="P19308CT-ND" constant="no"/>
 <attribute name="MF" value="Panasonic" constant="no"/>
 <attribute name="MPN" value="ERJ-6DSFR10V" constant="no"/>
+</technology>
+<technology name="10">
+<attribute name="DIGIKEY" value="A129603CT-ND" constant="no"/>
+<attribute name="MF" value="TE" constant="no"/>
+<attribute name="MPN" value="CRGCQ0402F10R" constant="no"/>
 </technology>
 <technology name="100">
 <attribute name="DIGIKEY" value="311-100CRCT-ND" constant="no"/>
@@ -7488,15 +7609,40 @@ Source: AVX .. aphvc.pdf</description>
 <attribute name="MF" value="Murata" constant="no"/>
 <attribute name="MPN" value="GRT155R61E224KE01D" constant="no"/>
 </technology>
+<technology name="100PF">
+<attribute name="DIGIKEY" value="311-1024-1-ND" constant="no"/>
+<attribute name="MF" value="Yageo" constant="no"/>
+<attribute name="MPN" value="CC0402JRNPO9BN101" constant="no"/>
+</technology>
+<technology name="10NF">
+<attribute name="DIGIKEY" value="490-4762-1-ND" constant="no"/>
+<attribute name="MF" value="Murata" constant="no"/>
+<attribute name="MPN" value="GCM155R71H103KA55D" constant="no"/>
+</technology>
 <technology name="12PF">
 <attribute name="DIGIKEY" value="445-5585-1-ND" constant="no"/>
 <attribute name="MF" value="TDK" constant="no"/>
 <attribute name="MPN" value="CGA2B2C0G1H120J050BA" constant="no"/>
 </technology>
+<technology name="1NF">
+<attribute name="DIGIKEY" value="490-3244-1-ND" constant="no"/>
+<attribute name="MF" value="Murata" constant="no"/>
+<attribute name="MPN" value="GRM1555C1H102JA01D" constant="no"/>
+</technology>
 <technology name="220PF">
 <attribute name="DIGIKEY" value="587-1215-1-ND" constant="no"/>
 <attribute name="MF" value="Taiyo Yuden" constant="no"/>
 <attribute name="MPN" value="UMK105CG221JV-F" constant="no"/>
+</technology>
+<technology name="39PF">
+<attribute name="DIGIKEY" value="399-1018-1-ND" constant="no"/>
+<attribute name="MF" value="Kemet" constant="no"/>
+<attribute name="MPN" value="C0402C390J5GAC7867" constant="no"/>
+</technology>
+<technology name="47PF">
+<attribute name="DIGIKEY" value="490-3254-1-ND" constant="no"/>
+<attribute name="MF" value="Murata" constant="no"/>
+<attribute name="MPN" value="GRM155R71E473KA88D" constant="no"/>
 </technology>
 <technology name="56PF">
 <attribute name="DIGIKEY" value="311-1022-1-ND" constant="no"/>
@@ -8564,7 +8710,10 @@ Source: AVX .. aphvc.pdf</description>
 </connects>
 <technologies>
 <technology name="">
+<attribute name="DIGIKEY" value="900-2059570671CT-ND" constant="no"/>
 <attribute name="DISP" value="Remote" constant="no"/>
+<attribute name="MF" value="Molex" constant="no"/>
+<attribute name="MPN" value="2059570671" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8579,7 +8728,10 @@ Source: AVX .. aphvc.pdf</description>
 </connects>
 <technologies>
 <technology name="">
+<attribute name="DIGIKEY" value="WM22471CT-ND" constant="no"/>
 <attribute name="DISP" value="Logger" constant="no"/>
+<attribute name="MF" value="Molex" constant="no"/>
+<attribute name="MPN" value="5055670681" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8630,7 +8782,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="U1" library="bschulz" deviceset="SN74HC04" device=""/>
 <part name="U6" library="bschulz" deviceset="SN74AC08" device=""/>
 <part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R5" library="bschulz_passives" deviceset="R-EU_" device="R0603" value="82m"/>
+<part name="R5" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.082" value="82m"/>
 <part name="GND13" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="D1" library="bschulz" deviceset="LM4040" device="" technology="2.048" value="2.048V"/>
@@ -8643,17 +8795,17 @@ Source: AVX .. aphvc.pdf</description>
 <part name="Q2" library="bschulz" deviceset="MOSFET-NCH" device="-2N7002P" value="2N7002"/>
 <part name="R2" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="GND19" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R6" library="bschulz_passives" deviceset="R-EU_" device="R0603" value="82m"/>
+<part name="R6" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.082" value="82m"/>
 <part name="Q7" library="bschulz" deviceset="MOSFET-PCH" device="-AO3419" value="AO3419"/>
 <part name="Q3" library="bschulz" deviceset="MOSFET-NCH" device="-2N7002P" value="2N7002"/>
 <part name="R3" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R7" library="bschulz_passives" deviceset="R-EU_" device="R0603" value="82m"/>
+<part name="R7" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.082" value="82m"/>
 <part name="Q8" library="bschulz" deviceset="MOSFET-PCH" device="-AO3419" value="AO3419"/>
 <part name="Q4" library="bschulz" deviceset="MOSFET-NCH" device="-2N7002P" value="2N7002"/>
 <part name="R4" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R8" library="bschulz_passives" deviceset="R-EU_" device="R0603" value="82m"/>
+<part name="R8" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="0.082" value="82m"/>
 <part name="J1" library="GEMS_Plugs" deviceset="CONN_TALON" device="_REMOTE"/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R17" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
@@ -8667,8 +8819,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="R9" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="100K" value="100k"/>
 <part name="GND24" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U8" library="bschulz" deviceset="MCP23018" device="QFN"/>
-<part name="R14" library="bschulz_passives" deviceset="R-EU_" device="R0603"/>
-<part name="R13" library="bschulz_passives" deviceset="R-EU_" device="R0603"/>
+<part name="R14" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="49.9K" value="49.9k"/>
+<part name="R13" library="bschulz_passives" deviceset="R-EU_" device="R0603" technology="110K" value="110k"/>
 <part name="GND44" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="GND45" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U10" library="bschulz" deviceset="74HC4852" device=""/>
@@ -8714,8 +8866,8 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND40" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U7" library="bschulz" deviceset="24AA02" device="SOT23"/>
 <part name="GND56" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="R16" library="bschulz_passives" deviceset="R-EU_" device="R0402"/>
-<part name="R15" library="bschulz_passives" deviceset="R-EU_" device="R0402"/>
+<part name="R16" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
+<part name="R15" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="GND29" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U18" library="bschulz" deviceset="SN74AUP1G08" device="DCK"/>
 <part name="GND30" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -8746,6 +8898,12 @@ Source: AVX .. aphvc.pdf</description>
 <part name="R22" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="R26" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="GND63" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="TP1" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP2" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP3" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP4" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP5" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
+<part name="TP6" library="bschulz" deviceset="TESTPOINT" device="RCU"/>
 </parts>
 <sheets>
 <sheet>
@@ -9589,6 +9747,8 @@ Source: AVX .. aphvc.pdf</description>
 <plain>
 <text x="124.46" y="157.48" size="1.778" layer="91" align="center">ALPHA</text>
 <text x="71.12" y="203.2" size="6.4516" layer="91">ADD DECOUPLING CAP!</text>
+<text x="170.18" y="58.42" size="6.4516" layer="91" align="center">Fix! </text>
+<text x="129.54" y="147.32" size="2.54" layer="91" align="center">ADR: 0x22</text>
 </plain>
 <instances>
 <instance part="J1" gate="G$1" x="22.86" y="104.14" smashed="yes">
@@ -9719,6 +9879,24 @@ Source: AVX .. aphvc.pdf</description>
 <instance part="R12" gate="G$1" x="63.5" y="111.76" smashed="yes" rot="R90">
 <attribute name="NAME" x="62.0014" y="107.95" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="66.802" y="107.95" size="1.778" layer="96" rot="R90"/>
+</instance>
+<instance part="TP1" gate="G$1" x="68.58" y="73.66" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.77" y="71.12" size="1.27" layer="95" rot="R180" align="center"/>
+</instance>
+<instance part="TP2" gate="G$1" x="68.58" y="68.58" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.77" y="66.04" size="1.27" layer="95" rot="R180" align="center"/>
+</instance>
+<instance part="TP3" gate="G$1" x="68.58" y="63.5" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.77" y="60.96" size="1.27" layer="95" rot="R180" align="center"/>
+</instance>
+<instance part="TP4" gate="G$1" x="68.58" y="58.42" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.77" y="55.88" size="1.27" layer="95" rot="R180" align="center"/>
+</instance>
+<instance part="TP5" gate="G$1" x="68.58" y="53.34" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.77" y="50.8" size="1.27" layer="95" rot="R180" align="center"/>
+</instance>
+<instance part="TP6" gate="G$1" x="68.58" y="48.26" smashed="yes" rot="R90">
+<attribute name="NAME" x="64.77" y="45.72" size="1.27" layer="95" rot="R180" align="center"/>
 </instance>
 </instances>
 <busses>
@@ -9892,6 +10070,11 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="180.34" y1="55.88" x2="180.34" y2="53.34" width="0.1524" layer="91"/>
 <pinref part="GND29" gate="1" pin="GND"/>
 </segment>
+<segment>
+<pinref part="TP1" gate="G$1" pin="P$1"/>
+<wire x1="68.58" y1="73.66" x2="73.66" y2="73.66" width="0.1524" layer="91"/>
+<label x="73.66" y="73.66" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SDA" class="0">
 <segment>
@@ -9899,12 +10082,22 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="33.02" y1="109.22" x2="38.1" y2="109.22" width="0.1524" layer="91"/>
 <label x="38.1" y="109.22" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="TP2" gate="G$1" pin="P$1"/>
+<wire x1="68.58" y1="68.58" x2="73.66" y2="68.58" width="0.1524" layer="91"/>
+<label x="73.66" y="68.58" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SCL" class="0">
 <segment>
 <pinref part="J1" gate="G$1" pin="SCL"/>
 <wire x1="33.02" y1="111.76" x2="38.1" y2="111.76" width="0.1524" layer="91"/>
 <label x="38.1" y="111.76" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="TP3" gate="G$1" pin="P$1"/>
+<wire x1="68.58" y1="63.5" x2="73.66" y2="63.5" width="0.1524" layer="91"/>
+<label x="73.66" y="63.5" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VPORT1_OUT" class="0">
@@ -10265,6 +10458,11 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="33.02" y1="114.3" x2="38.1" y2="114.3" width="0.1524" layer="91"/>
 <label x="38.1" y="114.3" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="TP6" gate="G$1" pin="P$1"/>
+<wire x1="68.58" y1="48.26" x2="73.66" y2="48.26" width="0.1524" layer="91"/>
+<label x="73.66" y="48.26" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SDA_OB" class="0">
 <segment>
@@ -10287,6 +10485,11 @@ Source: AVX .. aphvc.pdf</description>
 <wire x1="116.84" y1="134.62" x2="111.76" y2="134.62" width="0.1524" layer="91"/>
 <label x="111.76" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="TP4" gate="G$1" pin="P$1"/>
+<wire x1="68.58" y1="58.42" x2="73.66" y2="58.42" width="0.1524" layer="91"/>
+<label x="73.66" y="58.42" size="0.8128" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="SCL_OB" class="0">
 <segment>
@@ -10308,6 +10511,11 @@ Source: AVX .. aphvc.pdf</description>
 <pinref part="U9" gate="G$1" pin="SCL"/>
 <wire x1="116.84" y1="132.08" x2="111.76" y2="132.08" width="0.1524" layer="91"/>
 <label x="111.76" y="132.08" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="TP5" gate="G$1" pin="P$1"/>
+<wire x1="68.58" y1="53.34" x2="73.66" y2="53.34" width="0.1524" layer="91"/>
+<label x="73.66" y="53.34" size="0.8128" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

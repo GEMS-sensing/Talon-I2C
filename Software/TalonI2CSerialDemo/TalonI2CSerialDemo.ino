@@ -35,7 +35,7 @@ char ReadArray[25] = {0};
 
  // Adafruit_MCP23008 io;
 // Adafruit_MCP23X17 io;
-MCP23018 io(0x20);
+MCP23018 io(0x22);
 // MCP2301x io;
 
 // #define IOEXP_MODE  (IOCON_INTCC | IOCON_INTPOL | IOCON_ODR | IOCON_MIRROR)
@@ -244,6 +244,7 @@ void Sensor1()
 {
 	// Serial.println(">Spector1");
 	/////////////// SETUP /////////////////////
+	digitalWrite(I2C_EN, LOW); //Turn on external I2C
 	uint8_t error_dps368 = 0; //DEBUG! FIX! Change library to return stuff properly
 	pressureSense.begin(Wire); //Initialize DPS368 sensor //DEBUG! FIX! Change library to return stuff properly
 	uint8_t error_sht31 = rhSense.begin(0x44); //Initialize SHT31 sensor
@@ -267,6 +268,7 @@ void Sensor1()
 
 	float humidity = rhSense.readHumidity(); //Grab new humidity values [%]
 	float temp_sht31 = rhSense.readTemperature(); //Grab new temp values [°C]
+	digitalWrite(I2C_EN, HIGH); //Turn off external I2C
 
 	Serial.print("\tTemp (SHT31): "); Serial.print(temp_sht31, 4); Serial.print(" °C\t"); //Print temp to 4 decimal places
 	Serial.print("Temp (DPS368): "); Serial.print(temp_dps368, 2); Serial.print(" °C\t"); //Print temp to 2 decimal places
@@ -338,6 +340,3 @@ void SetDefaultPins()
 	io.digitalWrite(SENSE_EN, HIGH); //Default sense to on 
 	digitalWrite(I2C_EN, HIGH); //Turn on external I2C
 }
-
-
-

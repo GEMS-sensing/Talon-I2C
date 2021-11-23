@@ -591,8 +591,12 @@ http://www.maxim-ic.com .. MAX3223-MAX3243.pdf</description>
 <wire x1="2" y1="-2" x2="2" y2="2" width="0.127" layer="21"/>
 <wire x1="2" y1="2" x2="-2" y2="2" width="0.127" layer="21"/>
 <circle x="-2.286" y="2.286" radius="0.179603125" width="0.127" layer="25"/>
-<smd name="EP" x="0" y="0" dx="2.6" dy="2.6" layer="1"/>
+<smd name="EP" x="0" y="0" dx="2.6" dy="2.6" layer="1" cream="no"/>
 <text x="0" y="2.921" size="0.6096" layer="25" font="vector" ratio="15" align="center">&gt;NAME</text>
+<rectangle x1="-1.2" y1="0.15" x2="-0.15" y2="1.2" layer="31"/>
+<rectangle x1="0.15" y1="0.15" x2="1.2" y2="1.2" layer="31" rot="R270"/>
+<rectangle x1="-1.2" y1="-1.2" x2="-0.15" y2="-0.15" layer="31" rot="R90"/>
+<rectangle x1="0.15" y1="-1.2" x2="1.2" y2="-0.15" layer="31" rot="R180"/>
 </package>
 <package name="VQFN-16">
 <description>&lt;b&gt; DHVQFN, 16 Pos (SOT763-1)&lt;/b&gt;&lt;br&gt;&lt;a href = "https://assets.nexperia.com/documents/package-information/SOT763-1.pdf"&gt;Datasheet&lt;/a&gt;</description>
@@ -614,16 +618,16 @@ http://www.maxim-ic.com .. MAX3223-MAX3243.pdf</description>
 <smd name="9" x="1.8" y="0.25" dx="0.24" dy="0.9" layer="1" rot="R270"/>
 <smd name="EP" x="0" y="0" dx="0.9" dy="1.9" layer="1" rot="R90" cream="no"/>
 <polygon width="0" layer="31">
-<vertex x="-0.55" y="0.2"/>
-<vertex x="-0.55" y="-0.2"/>
-<vertex x="-0.15" y="-0.2"/>
-<vertex x="-0.15" y="0.2"/>
+<vertex x="-0.9" y="0.375"/>
+<vertex x="-0.9" y="-0.375"/>
+<vertex x="-0.15" y="-0.375"/>
+<vertex x="-0.15" y="0.375"/>
 </polygon>
 <polygon width="0" layer="31">
-<vertex x="0.55" y="-0.2"/>
-<vertex x="0.55" y="0.2"/>
-<vertex x="0.15" y="0.2"/>
-<vertex x="0.15" y="-0.2"/>
+<vertex x="0.9" y="-0.375"/>
+<vertex x="0.9" y="0.375"/>
+<vertex x="0.15" y="0.375"/>
+<vertex x="0.15" y="-0.375"/>
 </polygon>
 <wire x1="-1.75" y1="1.25" x2="-1.75" y2="-1.25" width="0.127" layer="21"/>
 <wire x1="-1.75" y1="-1.25" x2="1.75" y2="-1.25" width="0.127" layer="21"/>
@@ -728,10 +732,10 @@ http://www.maxim-ic.com .. MAX3223-MAX3243.pdf</description>
 <text x="0" y="-2.032" size="0.6096" layer="21" font="vector" ratio="15" align="center">&gt;NAME</text>
 <smd name="EP" x="0" y="0" dx="1.65" dy="2.25" layer="1" cream="no"/>
 <polygon width="0" layer="31">
-<vertex x="-0.325" y="0.55"/>
-<vertex x="-0.325" y="-0.55"/>
-<vertex x="0.325" y="-0.55"/>
-<vertex x="0.325" y="0.55"/>
+<vertex x="-0.625" y="0.98"/>
+<vertex x="-0.625" y="-0.98"/>
+<vertex x="0.625" y="-0.98"/>
+<vertex x="0.625" y="0.98"/>
 </polygon>
 </package>
 <package name="ESE-22MH">
@@ -895,10 +899,10 @@ Source: http://focus.ti.com/lit/ds/slcs146e/slcs146e.pdf</description>
 <smd name="5" x="0.75" y="1.4" dx="0.625" dy="0.25" layer="1" rot="R90"/>
 <smd name="EP" x="0" y="0" dx="1.6" dy="1.6" layer="1" cream="no"/>
 <polygon width="0" layer="31">
-<vertex x="-0.3" y="0.3"/>
-<vertex x="-0.3" y="-0.3"/>
-<vertex x="0.3" y="-0.3"/>
-<vertex x="0.3" y="0.3"/>
+<vertex x="-0.625" y="0.625"/>
+<vertex x="-0.625" y="-0.625"/>
+<vertex x="0.625" y="-0.625"/>
+<vertex x="0.625" y="0.625"/>
 </polygon>
 <wire x1="-1" y1="1.5" x2="1" y2="1.5" width="0.127" layer="21"/>
 <wire x1="1" y1="1.5" x2="1" y2="-1.5" width="0.127" layer="21"/>

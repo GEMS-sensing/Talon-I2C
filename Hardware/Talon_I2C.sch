@@ -425,10 +425,10 @@
 <package name="TSSOP14">
 <description>&lt;b&gt;Thin Shrink Small Outline Plastic 14&lt;/b&gt;&lt;br&gt;0.65mm pitch, 14 pin&lt;br&gt;
 &lt;a href = https://pdfserv.maximintegrated.com/en/ds/MAX3221-MAX3243.pdf&gt;Datasheet&lt;/a&gt;</description>
-<wire x1="-2.1896" y1="-2.2828" x2="2.1896" y2="-2.2828" width="0.1524" layer="21"/>
-<wire x1="2.1896" y1="2.2828" x2="2.1896" y2="-2.2828" width="0.1524" layer="21"/>
-<wire x1="2.1896" y1="2.2828" x2="-2.1896" y2="2.2828" width="0.1524" layer="21"/>
-<wire x1="-2.1896" y1="-2.2828" x2="-2.1896" y2="2.2828" width="0.1524" layer="21"/>
+<wire x1="-2.35" y1="-2.2828" x2="2.35" y2="-2.2828" width="0.1524" layer="21"/>
+<wire x1="2.35" y1="2.2828" x2="2.35" y2="-2.2828" width="0.1524" layer="21"/>
+<wire x1="2.35" y1="2.2828" x2="-2.35" y2="2.2828" width="0.1524" layer="21"/>
+<wire x1="-2.35" y1="-2.2828" x2="-2.35" y2="2.2828" width="0.1524" layer="21"/>
 <wire x1="-1.961" y1="-2.0542" x2="1.961" y2="-2.0542" width="0.0508" layer="21"/>
 <wire x1="1.961" y1="2.0542" x2="1.961" y2="-2.0542" width="0.0508" layer="21"/>
 <wire x1="1.961" y1="2.0542" x2="-1.961" y2="2.0542" width="0.0508" layer="21"/>
@@ -8788,10 +8788,10 @@ Source: AVX .. aphvc.pdf</description>
 <devices>
 <device name="" package="1X04_M8_TE_T404103_BOARDLOCK">
 <connects>
-<connect gate="G$1" pin="3V3" pad="1"/>
-<connect gate="G$1" pin="GND" pad="3"/>
-<connect gate="G$1" pin="SCL" pad="4"/>
-<connect gate="G$1" pin="SDA" pad="2"/>
+<connect gate="G$1" pin="3V3" pad="2"/>
+<connect gate="G$1" pin="GND" pad="4"/>
+<connect gate="G$1" pin="SCL" pad="3"/>
+<connect gate="G$1" pin="SDA" pad="1"/>
 </connects>
 <technologies>
 <technology name="">

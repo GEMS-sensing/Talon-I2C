@@ -8950,16 +8950,32 @@ Source: AVX .. aphvc.pdf</description>
 <part name="R29" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1K" value="1k"/>
 <part name="R30" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1K" value="1k"/>
 <part name="R31" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1K" value="1k"/>
-<part name="C14" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="0.1UF" value="0.1uF"/>
+<part name="C14" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="0.1UF" value="DNP">
+<attribute name="DIGIKEY" value="DNP"/>
+<attribute name="MF" value="N/A"/>
+<attribute name="MPN" value="DNP"/>
+</part>
 <part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R32" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1K" value="1k"/>
-<part name="C15" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="0.1UF" value="0.1uF"/>
+<part name="C15" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="0.1UF" value="DNP">
+<attribute name="DIGIKEY" value="DNP"/>
+<attribute name="MF" value="N/A"/>
+<attribute name="MPN" value="DNP"/>
+</part>
 <part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R33" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1K" value="1k"/>
-<part name="C16" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="0.1UF" value="0.1uF"/>
+<part name="C16" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="0.1UF" value="DNP">
+<attribute name="DIGIKEY" value="DNP"/>
+<attribute name="MF" value="N/A"/>
+<attribute name="MPN" value="DNP"/>
+</part>
 <part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R34" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="1K" value="1k"/>
-<part name="C17" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="0.1UF" value="0.1uF"/>
+<part name="C17" library="bschulz_passives" deviceset="C-EU" device="C0402" technology="0.1UF" value="DNP">
+<attribute name="DIGIKEY" value="DNP"/>
+<attribute name="MF" value="N/A"/>
+<attribute name="MPN" value="DNP"/>
+</part>
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U11" library="bschulz" deviceset="SN74LVC1G3157" device="SC70"/>
 </parts>
@@ -9937,6 +9953,9 @@ Source: AVX .. aphvc.pdf</description>
 <text x="71.12" y="203.2" size="6.4516" layer="91">ADD DECOUPLING CAP!</text>
 <text x="170.18" y="60.96" size="6.4516" layer="91" align="center">Fix! </text>
 <text x="129.54" y="147.32" size="2.54" layer="91" align="center">ADR: 0x22</text>
+<text x="231.14" y="60.96" size="2.54" layer="91">ADR: 0x6B</text>
+<text x="25.4" y="160.02" size="2.54" layer="91">ADR: 0x50/0x30</text>
+<text x="121.92" y="121.92" size="2.54" layer="91">ADR: 0x41</text>
 </plain>
 <instances>
 <instance part="J1" gate="G$1" x="22.86" y="104.14" smashed="yes">

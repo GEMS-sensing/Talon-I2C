@@ -1361,12 +1361,11 @@ Please make sure your boards conform to these design rules.
 <attribute name="NAME" x="57.45" y="1.119" size="1.27" layer="26" font="vector" ratio="15" rot="MR0" align="center"/>
 <attribute name="VALUE" x="57.45" y="1.227" size="1.27" layer="28" font="vector" ratio="15" rot="MR0" align="center"/>
 </element>
-<element name="U7" library="bschulz" package="SOT23-5" value="24AA02SOT23" x="-18.796" y="17.018" smashed="yes" rot="R90">
-<attribute name="DIGIKEY" value="24AA025E64T-I/OTCT-ND" x="-18.796" y="17.018" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="DISP" value="24AA025E64" x="-18.796" y="17.018" size="1.778" layer="27" rot="R90" display="off"/>
+<element name="U7" library="bschulz" package="SOT23-5" value="AT24MAC602SOT23" x="-18.796" y="17.018" smashed="yes" rot="R90">
+<attribute name="DIGIKEY" value="AT24MAC602-STUM-TCT-ND" x="-18.796" y="17.018" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="DISP" value="AT24MAC602" x="-18.796" y="17.018" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MF" value="Microchip" x="-18.796" y="17.018" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MOUSER" value="24AA025E64T-I/OTCT-ND" x="-18.796" y="17.018" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="MPN" value="24AA025E64T-I/OT" x="-18.796" y="17.018" size="1.778" layer="27" rot="R90" display="off"/>
+<attribute name="MPN" value="AT24MAC602-STUM-T" x="-18.796" y="17.018" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="NAME" x="-20.066" y="17.018" size="0.6096" layer="25" font="vector" ratio="15" rot="R270" align="center"/>
 <attribute name="VALUE" x="-18.923" y="19.304" size="0.6096" layer="27" font="vector" ratio="15" rot="R180" align="center"/>
 </element>

@@ -2735,8 +2735,8 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/en/products/detail/onse
 </device>
 </devices>
 </deviceset>
-<deviceset name="24AA02" prefix="U">
-<description>&lt;b&gt;24AA02&lt;/b&gt; - 2k I&lt;sup&gt;2&lt;/sup&gt;C Serial EEPROM
+<deviceset name="AT24MAC*02" prefix="U">
+<description>&lt;b&gt;AT24MACx02&lt;/b&gt; - 2kb  I&lt;sup&gt;2&lt;/sup&gt;C Serial EEPROM with EUI serial number
 
 &lt;p&gt;&lt;b&gt;Characteristics:&lt;/b&gt;
 &lt;ul&gt;
@@ -2750,7 +2750,7 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/en/products/detail/onse
 
 &lt;p&gt;
 &lt;b&gt;Digikey:&lt;/b&gt;
-&lt;br&gt;&lt;a href = "https://www.digikey.com/en/products/detail/microchip-technology/24AA025E64T-I-OT/3908633"&gt; 24AA025E64T-I/OTCT-ND (SOT-23)&lt;/a&gt;</description>
+&lt;br&gt;&lt;a href = "https://www.digikey.com/en/products/detail/microchip-technology/AT24MAC602-STUM-T/3973073?s=N4IgTCBcDaIIIBUwBYCycDCA2ADGAtAMoICqq%2BCIAugL5A"&gt; AT24MAC602-STUM-T (SOT-23, EUI-64)&lt;/a&gt;</description>
 <gates>
 <gate name="G$1" symbol="EEPROM_WP" x="0" y="0"/>
 </gates>
@@ -2765,11 +2765,22 @@ Digikey: &lt;br&gt;&lt;a href = "https://www.digikey.com/en/products/detail/onse
 </connects>
 <technologies>
 <technology name="">
-<attribute name="DIGIKEY" value="24AA025E64T-I/OTCT-ND" constant="no"/>
-<attribute name="DISP" value="24AA025E64" constant="no"/>
+<attribute name="DIGIKEY" value="" constant="no"/>
+<attribute name="DISP" value="AT24MAC*02" constant="no"/>
 <attribute name="MF" value="Microchip" constant="no"/>
-<attribute name="MOUSER" value="24AA025E64T-I/OTCT-ND" constant="no"/>
-<attribute name="MPN" value="24AA025E64T-I/OT" constant="no"/>
+<attribute name="MPN" value="" constant="no"/>
+</technology>
+<technology name="4">
+<attribute name="DIGIKEY" value="AT24MAC402-STUM-TCT-ND" constant="no"/>
+<attribute name="DISP" value="AT24MAC402" constant="no"/>
+<attribute name="MF" value="Microchip" constant="no"/>
+<attribute name="MPN" value="AT24MAC402-STUM-T" constant="no"/>
+</technology>
+<technology name="6">
+<attribute name="DIGIKEY" value="AT24MAC602-STUM-TCT-ND" constant="no"/>
+<attribute name="DISP" value="AT24MAC602" constant="no"/>
+<attribute name="MF" value="Microchip" constant="no"/>
+<attribute name="MPN" value="AT24MAC602-STUM-T" constant="no"/>
 </technology>
 </technologies>
 </device>
@@ -8905,7 +8916,7 @@ Source: AVX .. aphvc.pdf</description>
 <part name="GND39" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J5" library="GEMS_Plugs" deviceset="CONN_I2C_LOGGER" device=""/>
 <part name="GND40" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
-<part name="U7" library="bschulz" deviceset="24AA02" device="SOT23"/>
+<part name="U7" library="bschulz" deviceset="AT24MAC*02" device="SOT23" technology="6" value="AT24MAC602SOT23"/>
 <part name="GND56" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R16" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
 <part name="R15" library="bschulz_passives" deviceset="R-EU_" device="R0402" technology="10K" value="10k"/>
